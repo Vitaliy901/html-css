@@ -1,0 +1,120 @@
+:root {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+	font-family: 'Lora', serif;
+}
+a {
+	text-decoration: none;
+	font-size: 0.8rem;
+	color: #D4A373;
+}
+/* main-wrapper */
+.main-wrapper {
+	max-width: 1440px;
+	min-height: 100vh;
+	display: flex;
+}
+.login__main-wrapper, .register__main-wrapper {
+	margin: 0 auto;
+}
+/* img */
+.main-wrapper__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+/* form */
+.form-login {
+	font-size: 0.8rem;
+}
+.main-wrapper__form-login {
+	flex: 1 1 720px;
+	box-sizing: border-box;
+	padding: 0 1rem;
+}
+.header {
+	font-family: 'League Spartan', sans-serif;
+	font-weight: 700;
+	font-size: 2rem;
+	max-width: 440px;
+}
+.form-login__header {
+	margin: 124px auto 110px;
+}
+/* fieldset */
+.form-login__fieldset-wrapper{
+	max-width: 440px;
+	margin: 0 auto;
+}
+.form-legend {
+	font-weight: 700;
+	font-size: 1.8rem;
+	border: none;
+	margin-bottom: 1.5rem;
+}
+
+/* inputs */
+.label {
+	font-size: 0.7rem;
+}
+#email, #pass, #confirm {
+	font-size: 1.4rem;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0.5rem auto 1.2rem;
+	border: 1px solid #E5E5E5;
+	border-radius: 5px;
+	height: 48px;
+}
+.button {
+	background: #D4A373;
+	color: #FFFFFF;
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid #E5E5E5;
+	border-radius: 5px;
+	height: 48px;
+	font-weight: 700;
+}
+/* checkbox */
+.form-login__checkbox-wrapper{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.2rem;
+}
+.form-login__label-wrapper {
+	display: flex;
+	align-items: center;
+}
+.checkbox {
+	width: 1rem;
+	height: 1rem;
+	margin-right: 18px;
+}
+.label-wrapper__checkbox {
+	margin-right: 18px;
+}
+/* link */
+.link-register__question{
+	padding-right: 8px;
+}
+.form-login__link-wrapper{
+	margin-top: 1.5rem;
+}
+/* ============================================== */
+@media (min-width: 200px) and (max-width: 600px) {
+    /* Свойства применяются в пределах от меньшего к большему. */
+}
+
+@media (orientation: portrait) {
+    /* Если высота экрана больше ширины, свойство применяется */
+}
+@media (orientation: landscape) {
+    /* Если ширина экрана больше высоты, свойство применяется */
+}
+/*  320px — 480px: мобильные устройства;
+    481px — 768px: планшеты;
+    769px — 1024px: маленькие экраны, ноутбуки;
+    1025px — 1200px: большие экраны;
+    1201px и больше —  очень большие экраны, телевизоры. */
