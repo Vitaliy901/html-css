@@ -19,10 +19,28 @@ a {
 	margin: 0 auto;
 }
 /* img */
+.img-wrapper {
+	position: relative;
+}
 .main-wrapper__img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+/* logo onix */
+.img-wrapper__onix-link {
+	position: absolute;
+	left: 2rem;
+	bottom: 0;
+}
+.onix-icon {
+	height: 100px;
+	width: 100px;
+	transition: 0.2s;
+	fill: rgba(61, 61, 61, 0.49);
+}
+.onix-icon:hover {
+	fill: rgb(123, 179, 189);
 }
 /* form */
 .form-login {
@@ -124,6 +142,7 @@ a {
 .form-login__link-wrapper{
 	margin-top: 1.5rem;
 }
+
 /* ============================================== */
 @media (min-width: 200px) and (max-width: 600px) {
     /* Свойства применяются в пределах от меньшего к большему. */
