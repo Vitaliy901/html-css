@@ -4,11 +4,6 @@
 	font-family: 'Lora', serif;
 	--main-color: #212529;
 }
-a {
-	text-decoration: none;
-	font-size: 0.8rem;
-	color: #D4A373;
-}
 /* main-wrapper */
 .main-wrapper {
 	max-width: 1440px;
@@ -71,13 +66,10 @@ a {
 	font-size: 1.8rem;
 	border: none;
 	line-height: 44.8px;
-	letter-spacing: 0.15px;
+	letter-spacing: 0.3px;
 }
 .fieldset-wrapper__form-legend {
 	margin-bottom: 30px;
-}
-.fieldset-wrapper__form-legend_margin_bottom {
-	margin-bottom: 26px;
 }
 /* inputs */
 .label {
@@ -95,15 +87,12 @@ a {
 .fieldset-wrapper__input {
 	margin: 10px auto 24px;
 }
-.fieldset-wrapper__input_margin-top {
-	margin: 7px auto 24px;
-}
 /* checkbox */
 .fieldset-wrapper__remember-forgot-wrapper{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 25px;
+	margin-bottom: 27px;
 }
 .fieldset-wrapper__checkbox-wrapper {
 	display: flex;
@@ -136,7 +125,7 @@ a {
 	background-color: #343A40;
 }
 /* link */
-.question, .register, .login{
+.question {
 	line-height: 24px;
 }
 .link-register__question{
@@ -145,7 +134,11 @@ a {
 .form-login__link-wrapper{
 	margin-top: 29px;
 }
-
+.link {
+	text-decoration: none;
+	font-size: 0.8rem;
+	color: #D4A373;
+}
 /* ============================================== */
 @media (min-width: 200px) and (max-width: 600px) {
     /* Свойства применяются в пределах от меньшего к большему. */

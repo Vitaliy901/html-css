@@ -30,12 +30,11 @@
 					<a class="logo form-wrapper__logo" href="/">RUNO</a>
 					<form class="form-login" action="#" method="POST">
 						<fieldset class="form-login__fieldset-wrapper">
-							<legend class="form-legend
-							fieldset-wrapper__form-legend_margin_bottom">Login to your account</legend>
+							<legend class="form-legend fieldset-wrapper__form-legend">Login to your account</legend>
 							<label class="label" for="email">Email</label>
-							<input class="input fieldset-wrapper__input_margin-top" id="email" type="email" name="email" pattern="\S+@[a-z]+\.[a-z]+" autofocus required>
+							<input class="input fieldset-wrapper__input" id="email" type="email" name="email" pattern="\S+@[a-z]+\.[a-z]+" autofocus required>
 							<label class="label" for="pass">Password</label>
-							<input class="input fieldset-wrapper__input_margin-top" id="pass" type="password" name="password" minlength="8" required>
+							<input class="input fieldset-wrapper__input" id="pass" type="password" name="password" minlength="8" required>
 							<div class="fieldset-wrapper__remember-forgot-wrapper">
 								<label class="fieldset-wrapper__checkbox-wrapper">
 									<input class="checkbox label-wrapper__checkbox" 
@@ -43,7 +42,7 @@
 									name="remember">
 									<span>Remember me</span>
 								</label>
-								<a href="#">Forgot password?</a>
+								<a class="link" href="#">Forgot password?</a>
 							</div>
 							<input class="button" type="submit" value="Log in">
 							<input class="button form-login__button button_black" type="button" value="Sign in with Google">
@@ -51,7 +50,7 @@
 								<span class="question link-register__question">
 									Don’t have an account?
 								</span>
-								<a class="registration" href="registration.html">Register</a>
+								<a class="link" href="registration.html">Register</a>
 							</div>
 						</fieldset>
 					</form>
