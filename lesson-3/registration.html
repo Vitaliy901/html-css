@@ -28,18 +28,30 @@
 				</div>
 				<div class="main-wrapper__form-wrapper">
 					<a class="logo form-wrapper__logo form-wrapper__logo_margin_top" href="/">RUNO</a>
-					<form class="form-login" action="#" method="POST">
-						<fieldset class="form-login__fieldset-wrapper">
+					<form class="form" action="#" method="POST">
+						<fieldset class="form__fieldset-wrapper">
 							<legend class="form-legend fieldset-wrapper__form-legend">Create account</legend>
 							<label class="label" for="email">Email</label>
-							<input class="input fieldset-wrapper__input" id="email" type="email" name="email" pattern="\S+@[a-z]+\.[a-z]+" autofocus required>
+							<input class="input fieldset-wrapper__input" 
+							id="email" 
+							type="email" 
+							name="email" 
+							pattern="\S+@[a-z]+\.[a-z]+" autofocus required>
 							<label class="label" for="pass">Password</label>
-							<input class="input fieldset-wrapper__input" id="pass" type="password" name="password" minlength="8" required>
+							<input class="input fieldset-wrapper__input" 
+							id="pass" 
+							type="password" 
+							name="password" 
+							minlength="8" required>
 							<label class="label" for="pass">Confirm Password</label>
-							<input class="input fieldset-wrapper__input" id="confirm" type="password" name="password" minlength="8" required>
+							<input class="input fieldset-wrapper__input" 
+							id="confirm"
+							type="password" 
+							name="password" 
+							minlength="8" required>
 							<input class="button" type="submit" value="Create account">
-							<button class="button form-login__button button_black" type="button">Sign up with Google</button>
-							<div class="form-login__link-wrapper">
+							<button class="button form__button button_black" type="button">Sign up with Google</button>
+							<div class="form__link-wrapper">
 								<span class="question link-register__question">
 									Already have an account?
 								</span>
