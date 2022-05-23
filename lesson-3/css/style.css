@@ -241,7 +241,7 @@ a {
 	justify-content: space-between;
 	margin-bottom: 29px;
 }
-.form {
+.search-form {
 	position: relative;
 }
 /* search */
@@ -261,12 +261,12 @@ a {
 	fill: #6C757D;
 	transition: 0.4s;
 }
-.form__icon-search {
+.search-form__icon-search {
 	position: absolute;
 	top: 11px;
 	left: 16px;
 }
-.search:focus + .form__icon-search {
+.search:focus + .search-form__icon-search {
 	fill: #1878cb;
 }
 .search:focus {
@@ -310,6 +310,21 @@ a {
 }
 .table__td {
 	padding: 20px 0 20px;
+}
+
+/* action */
+.icon-pencil, .icon-trash {
+	width: 24px;
+	height: 24px;
+	fill: rgb(0, 0, 0);
+	cursor: pointer;
+	transition: 0.4s;
+}
+.icon-trash:hover {
+	fill: rgb(167, 3, 3);
+}
+.icon-pencil:hover {
+	fill: rgb(19, 160, 97);
 }
 /* ============================================== */
 @media (min-width: 200px) and (max-width: 600px) {

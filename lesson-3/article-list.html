@@ -42,9 +42,9 @@
 				</div>
 				<h2 class="al">Article List</h2>
 				<div class="inner-wrapper__search-add">
-					<form class="form" action="#" method="POST">
+					<form class="search-form" action="#" method="POST">
 						<input class="search" type="search" placeholder="Search Articles" autocomplete="off">
-						<svg class="icon-search form__icon-search">
+						<svg class="icon-search search-form__icon-search">
 							<use xlink:href="#search"></use>
 						</svg>
 					</form>
@@ -70,7 +70,14 @@
 							<td class="td table__td">John Smith</td>
 							<td class="td table__td">28/12/2021</td>
 							<td class="td table__td">Published</td>
-							<td class="td table__td">actions</td>
+							<td class="td table__td">
+								<svg class="icon-pencil">
+									<use xlink:href="#pencil"></use>
+								</svg>
+								<svg class="icon-trash">
+									<use xlink:href="#trash"></use>
+								</svg>
+							</td>
 						</tr>
 						<tr class="row-body">
 							<td class="td table__td"><a href="#">check</a></td>
@@ -149,6 +156,21 @@
 			</div>
 		</main>
 
+		<svg display="none">
+			<symbol viewBox="0 0 24 24" id="trash">
+				<path fill="none" d="m17.004 20-.001-12h-10v12h10.001zm-4.001-10h2v8h-2v-8zm-4 0h2v8h-2v-8zm0-6h6v2h-6z"/><path d="M5.003 20c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V8h2V6h-4V4c0-1.103-.897-2-2-2h-6c-1.103 0-2 .897-2 2v2h-4v2h2v12zm4-16h6v2h-6V4zm-1 4h9l.001 12H7.003V8h1z"/><path d="M9.003 10h2v8h-2zm4 0h2v8h-2z"/>
+			</symbol>
+		</svg>
+	 	<svg display="none">
+			<symbol viewBox="0 0 256 256" id="pencil">
+				<g>
+					<path
+					d="m 221.17188,79.51465 -44.68653,-44.686 c -4.68612,-4.686841 -12.28458,-4.686841 -16.9707,0 l -26.34229,26.34225 -0.001,4.9e-4 -0.001,0.0015 -93.65522,93.65527 c -1.179926,1.18004 -2.099795,2.59398 -2.70044,4.15088 -0.0127,0.0303 -0.02149,0.062 -0.03345,0.0928 -0.514688,1.35505 -0.779387,2.7922 -0.78125,4.2417 V 208 c 0.0076,6.62428 5.375724,11.99242 12,12 h 44.68652 c 1.46911,-0.001 2.925458,-0.27273 4.29639,-0.80078 l 0.01514,-0.005 c 1.565728,-0.60033 2.987758,-1.52312 4.17383,-2.7085 l 120,-120 c 4.67822,-4.689685 4.67822,-12.281015 0,-16.9707 z M 45.94732,206.74524 v -31.70421 l 35.011846,35.01166 H 49.25477 c -1.825789,-0.002 -3.305363,-1.48166 -3.30745,-3.30745 z M 69.227313,177.95653 49.782128,158.74528 134.52853,74.651425 152.45739,93.486366 Z M 212.1372,89.850399 190.65702,111.33014 144.66964,65.342973 166.15006,43.862786 c 1.42657,-1.427308 3.74029,-1.427308 5.16687,0 l 40.82029,40.819813 c 1.42468,1.428036 1.42467,3.739774 -2e-5,5.1678 z M 96.796395,204.46879 76.772296,184.77416 l 83.807144,-83.57427 20.14524,19.57909 z"
+					id="path2"
+					sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccc" />
+				</g>
+			</symbol>
+		</svg>
 		<svg display="none">
 			<symbol viewBox="0 0 487.95 487.95" id="search">
 				<g>
