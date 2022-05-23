@@ -293,13 +293,41 @@ a {
 .thead, .row-body{
 	border-bottom: 1px solid #E5E5E5;
 }
+/* theade */
 .th {
 	font-size: 12px;
 	line-height: 20px;
 	color: #6C757D;
+	text-transform: uppercase;
+}
+.th:nth-child(2), .th:nth-child(3) {
+	text-align: start;
 }
 .thead__th {
 	padding-bottom: 10px;
+}
+.article-checkbox {
+	height: 20px;
+	width: 20px;
+	vertical-align: middle;
+}
+.image {
+	width: 5%;
+}
+.tittle {
+	width: 25%;
+}
+.author {
+	width: 28.1%;
+}
+.last-modified {
+	width: 8.2%;
+}
+.status {
+	width: 20.8%;
+}
+.action {
+	width: 8.5%;
 }
 /* tbody */
 .td {
@@ -308,17 +336,21 @@ a {
 	color: #495057;
 	font-weight: 500;
 }
+.td:first-child, .td:nth-child(4), .td:nth-child(5), .td:nth-child(6), .td:last-child {
+	text-align: center;
+}
 .table__td {
 	padding: 20px 0 20px;
 }
-
-/* action */
+/* action-icons */
 .icon-pencil, .icon-trash {
 	width: 24px;
 	height: 24px;
 	fill: rgb(0, 0, 0);
-	cursor: pointer;
 	transition: 0.4s;
+}
+.table__pencil-link {
+	padding-right: 17px;
 }
 .icon-trash:hover {
 	fill: rgb(167, 3, 3);
