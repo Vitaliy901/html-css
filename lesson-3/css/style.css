@@ -12,16 +12,13 @@ a {
 	max-width: 1440px;
 	min-height: 100vh;
 	display: flex;
-
 }
 .login__main-wrapper, .register__main-wrapper {
 	margin: 0 auto;
 	position: relative;
 }
 /* img and onix logo*/
-.img-wrapper {
-	flex: 1 1 720px;
-}
+
 .img-wrapper::before {
 	content: "";
 	position: absolute;
