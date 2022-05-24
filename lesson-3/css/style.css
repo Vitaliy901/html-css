@@ -7,18 +7,16 @@
 a {
 	text-decoration: none;
 }
-/* main-wrapper */
-.main-wrapper {
-	max-width: 1440px;
-	min-height: 100vh;
+.login, .registration {
 	display: flex;
-}
-.login__main-wrapper, .register__main-wrapper {
-	margin: 0 auto;
-	position: relative;
+	justify-content: center;
+	min-height: 100vh;
 }
 /* img and onix logo*/
-
+.img-wrapper {
+	flex: 50%;
+	position: relative;
+}
 .img-wrapper::before {
 	content: "";
 	position: absolute;
@@ -29,19 +27,19 @@ a {
 	background: url(../img/onix-logo.svg) center no-repeat;
 	background-size: contain;
 }
-.main-wrapper__img {
+.img-wrapper__img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
 }
-/* form */
-.form {
-	font-size: 0.8rem;
-}
-.main-wrapper__form-wrapper {
-	flex: 1 1 720px;
-	box-sizing: border-box;
-	padding: 0 1rem;
+/* right side */
+.login__form-wrapper, .registration__form-wrapper{
+	flex: 50%;
+
 }
 /* logo */
 .logo{
@@ -60,11 +58,15 @@ a {
 .form-wrapper__logo_margin_top {
 	margin-top: 97px;
 }
-/* fieldset */
-.form__fieldset-wrapper{
+/* form */
+.form {
+	font-size: 0.8rem;
 	max-width: 440px;
+}
+.form-wrapper__form {
 	margin: 0 auto;
 }
+/* fieldset */
 .form-legend {
 	font-weight: 700;
 	font-size: 1.8rem;
@@ -72,7 +74,7 @@ a {
 	line-height: 44.8px;
 	letter-spacing: 0.3px;
 }
-.fieldset-wrapper__form-legend {
+.form__form-legend {
 	margin-bottom: 30px;
 }
 /* inputs */
