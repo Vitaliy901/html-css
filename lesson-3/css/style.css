@@ -17,15 +17,23 @@ a {
 	flex: 50%;
 	position: relative;
 }
-.img-wrapper::before {
+.onix::before {
 	content: "";
-	position: absolute;
-	bottom: 10px;
-	left: 40px;
+	display: block;
 	height: 50px;
 	width: 100px;
 	background: url(../img/onix-logo.svg) center no-repeat;
 	background-size: contain;
+	transition: 0.4s;
+	opacity: 0.7;
+}
+.onix:hover::before {
+	opacity: 1;
+}
+.img-wrapper__onix {
+	position: absolute;
+	bottom: 10px;
+	left: 40px;
 }
 .img-wrapper__img {
 	width: 100%;
@@ -39,7 +47,6 @@ a {
 /* right side */
 .login__form-wrapper, .registration__form-wrapper{
 	flex: 50%;
-
 }
 /* logo */
 .logo{
