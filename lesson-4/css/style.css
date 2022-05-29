@@ -47,13 +47,12 @@ a {
 /* right side */
 .login__form-wrapper, .registration__form-wrapper{
 	flex: 50%;
+	padding: 0 20px;
+	box-sizing: border-box;
 }
 /* logo */
 .logo{
-	font-family: 'League Spartan', sans-serif;
-	font-weight: 700;
-	font-size: 2.3rem;
-	line-height: 46px;
+	font: 700 2.3rem/46px 'League Spartan', sans-serif;
 	letter-spacing: 5.5px;
 	max-width: 440px;
 	color: var(--main-color);
@@ -78,7 +77,7 @@ a {
 	font-weight: 700;
 	font-size: 1.8rem;
 	border: none;
-	line-height: 44.8px;
+	line-height: 45px;
 	letter-spacing: 0.3px;
 }
 .form__form-legend {
@@ -240,7 +239,7 @@ a {
 .al {
 	color: #212529;
 	font-size: 24px;
-	line-height: 28.13px;
+	line-height: 28px;
 	letter-spacing: 0.4px;
 	margin-bottom: 21px;
 }
@@ -368,6 +367,26 @@ a {
 	color: rgb(167, 3, 3);
 }
 /* ============================================== */
+/* form */
+@media all and (max-width: 832px) {
+	.img-wrapper {
+		flex: none;
+	}
+	.form, .logo {
+		max-width: 525px;
+	}
+	.logo {
+		text-align: center;
+	}
+	.form-legend {
+		font-size: 1.3rem;
+		text-align: center;
+	}
+}
+
+
+
+/* article-list */
 @media all and (max-width: 991px) {
 	.table {
 		width: 991px;
@@ -387,10 +406,13 @@ a {
 	}
 	.inner-wrapper__search-add {
 		flex-direction: column;
-
 	}
 	.button-add {
 		align-self: flex-end;
+	}
+	.al {
+		font-size: 20px;
+		margin-bottom: 20px;
 	}
 }
 
