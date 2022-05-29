@@ -100,7 +100,7 @@ a {
 	padding: 0 10px;
 }
 .input:valid {
-	box-shadow: inset 0 0 2px 1px rgba(0, 144, 0, 0.478);
+	box-shadow: inset 0 0 2px 1px rgba(114, 173, 114, 0.607);
 }
 .input:focus {
 	border: 1px solid #444444;
@@ -222,7 +222,7 @@ a {
 .article-list__inner-wrapper {
 	margin: 0px auto;
 	max-width: 1440px;
-	padding: 0px 40px 0px 40px;
+	padding: 0px 40px;
 }
 /* article header */
 .inner-wrapper__home-wrapper {
@@ -249,35 +249,34 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 10px;
 	margin-bottom: 29px;
 }
 .search-form {
 	position: relative;
+	flex: 0 1 304px;
 }
 /* search */
 .search {
 	height: 37px;
-	width: 260px;
+	width: calc(100% - 44px) ;
 	border: 1px solid #E5E5E5;
 	border-radius: 5px;
 	font-size: 14px;
 	line-height: 20px;
-	padding-left: 43.5px;
+	padding-left: 44px;
 	transition: 0.4s;
 }
-.icon-search {
-	height: 19px;
-	width: 19px;
-	fill: #6C757D;
+.icon-search-glass {
+	color: #6c757d;
 	transition: 0.4s;
-}
-.search-form__icon-search {
 	position: absolute;
-	top: 11px;
-	left: 16px;
+	top: 10px;
+	left: 15px;
 }
-.search:focus + .search-form__icon-search {
-	fill: #1878cb;
+.search:focus + .icon-search-glass {
+	color: #D4A373;
 }
 .search:focus {
 	border: 1px solid #444444;
@@ -300,80 +299,99 @@ a {
 .table{
 	width: 100%;
 }
-.thead, .row-body{
+.table tr{
 	border-bottom: 1px solid #E5E5E5;
 }
 /* theade */
-.th {
+.table th {
 	font-size: 12px;
-	line-height: 20px;
+	line-height: 15px;
 	color: #6C757D;
 	text-transform: uppercase;
+	padding: 0 10px 10px 0;
+	vertical-align: middle;
 }
-.th:nth-child(2), .th:nth-child(3) {
-	text-align: start;
-}
-.thead__th {
-	padding-bottom: 10px;
-}
-.article-checkbox {
+.table input {
 	height: 20px;
 	width: 20px;
 	vertical-align: middle;
 }
-.image {
+.table-image {
 	width: 5%;
+	text-align: start;
 }
-.tittle {
+.table-title {
 	width: 25%;
+	text-align: start;
 }
-.author {
-	width: 28.1%;
+.table-author {
+	width: 28%;
 }
-.last-modified {
+.table-last-modified {
 	width: 8.2%;
 }
-.status {
+.table-status {
 	width: 20.8%;
 }
-.action {
+.table-action {
 	width: 8.5%;
 }
 /* tbody */
-.td {
+.table td {
 	font-size: 16px;
 	line-height: 24px;
 	color: #495057;
 	font-weight: 400;
+	vertical-align: middle;
+	padding: 20px 10px 20px 0;
 }
-.td_font-weight {
+.table td:nth-child(3){
 	font-weight: 500;
 }
-.td:first-child, .td:nth-child(4), .td:nth-child(5), .td:nth-child(6), .td:last-child {
+.table td:not(.table td:nth-child(2), .table td:nth-child(3)) {
 	text-align: center;
-}
-.table__td {
-	padding: 20px 0 20px;
 }
 /* action-icons */
 .icon-pencil, .icon-trash {
-	width: 24px;
-	height: 24px;
-	fill: rgb(0, 0, 0);
 	transition: 0.4s;
+	color: #000000;
+	font-size: 24px;
 }
-.table__pencil-link {
-	padding-right: 17px;
-}
-.icon-trash:hover {
-	fill: rgb(167, 3, 3);
+.table td:last-child {
+	display: flex;
+	justify-content: space-evenly;
 }
 .icon-pencil:hover {
-	fill: rgb(19, 160, 97);
+	color: rgb(19, 160, 97);
+}
+.icon-trash:hover {
+	color: rgb(167, 3, 3);
 }
 /* ============================================== */
-@media (min-width: 200px) and (max-width: 600px) {
-    /* Свойства применяются в пределах от меньшего к большему. */
+@media all and (max-width: 991px) {
+	.table {
+		width: 991px;
+	}
+	.table-wrapper{
+		overflow-y: hidden;
+		overflow-x: scroll;
+	}
+	.article-list__inner-wrapper {
+		padding: 0 20px;
+	}
+}
+@media all and (max-width: 512px) {
+	.search-form {
+		width: 100%;
+		flex: 1 1 100%;
+	}
+	.inner-wrapper__search-add {
+		flex-direction: column;
+
+	}
+	.button-add {
+		align-self: flex-end;
+	}
 }
 
 @media (orientation: portrait) {
@@ -382,8 +400,10 @@ a {
 @media (orientation: landscape) {
     /* Если ширина экрана больше высоты, свойство применяется */
 }
-/*  320px — 480px: мобильные устройства;
-    481px — 768px: планшеты;
-    769px — 1024px: маленькие экраны, ноутбуки;
-    1025px — 1200px: большие экраны;
-    1201px и больше —  очень большие экраны, телевизоры. */
+/*  320px: динозавры;
+	375px - мобильные устройства;
+	565px - screen-xxs;
+    767px: планшеты;
+    901px: маленькие экраны, ноутбуки;
+    1199px: большие экраны;
+    1400px и больше —  очень большие экраны, телевизоры. */
