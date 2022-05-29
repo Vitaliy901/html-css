@@ -382,6 +382,9 @@ a {
 		font-size: 1.3rem;
 		text-align: center;
 	}
+	.checkbox {
+		margin-right: 7px;
+	}
 }
 
 
