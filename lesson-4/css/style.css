@@ -212,13 +212,11 @@ a {
 /* header-links */
 .header-link {
 	display: inline-block;
-	font-size: 14px;
-	line-height: 20px;
-	font-weight: 700;
+	font: 700 14px/20px 'Roboto', sans-serif;
+	letter-spacing: 0.5px;
 	text-decoration: none;
 	color: #212529;
 	border-bottom: 2px solid #d4a37300;
-	letter-spacing: 0px;
 	padding-bottom: 4px;
 	transition: 0.4s;
 }
@@ -242,13 +240,13 @@ a {
 .inner-wrapper__home-wrapper {
 	padding: 19px 0 10px;
 }
-.home {
+.article-home{
 	color: #D4A373;
 	font-size: 14px;
-	line-height: 16.41px;
+	line-height: 16.40px;
 	transition: 0.4s;
 }
-.home:hover {
+.article-home:hover {
 	color: #af7d4b;
 }
 .al {
