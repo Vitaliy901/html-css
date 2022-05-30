@@ -370,7 +370,7 @@ a {
 /* form */
 @media all and (max-width: 832px) {
 	.img-wrapper {
-		flex: none;
+		display: none;
 	}
 	.form, .logo {
 		max-width: 525px;
