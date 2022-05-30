@@ -51,12 +51,27 @@ a {
 	box-sizing: border-box;
 }
 /* logo */
-.logo{
+.logo a{
 	font: 700 2.3rem/46px 'League Spartan', sans-serif;
 	letter-spacing: 5.5px;
-	max-width: 440px;
 	color: var(--main-color);
-	display: block;
+	position: relative;
+}
+.logo a::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	height: 2px;
+	width: 0%;
+	background-color: #000000;
+	transition: width 0.4s;
+}
+.logo a:hover::before {
+	width: 95%;
+}
+.logo {
+	max-width: 440px;
 }
 .form-wrapper__logo {
 	margin: 124px auto 110px;
@@ -168,7 +183,7 @@ a {
 .link:hover {
 	text-decoration: underline;
 }
-/* ==========article list======= */
+/* ==================article list======================= */
 .header {
 	border-bottom: 1px solid #E5E5E5;
 	position: fixed;
@@ -186,7 +201,7 @@ a {
 	padding: 24px 20px 28px 40px;
 }
 /* logo */
-.logo_font {
+.logo_font a {
 	line-height: 24px;
 	font-size: 1rem;
 	letter-spacing: 5px;
