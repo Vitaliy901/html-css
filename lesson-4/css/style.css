@@ -1,7 +1,7 @@
 :root {
     font-size: 20px;
     color: rgb(0, 0, 0);
-	font-family: 'Lora', serif;
+	font-family: 'Lora', sans-serif;
 	--main-color: #212529;
 }
 a {
@@ -212,7 +212,7 @@ a {
 /* header-links */
 .header-link {
 	display: inline-block;
-	font: 700 14px/20px 'Roboto', sans-serif;
+	font: 700 14px/20px 'Lora', sans-serif;
 	letter-spacing: 0.5px;
 	text-decoration: none;
 	color: #212529;
