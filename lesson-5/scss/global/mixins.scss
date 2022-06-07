@@ -1,0 +1,60 @@
+
+
+  /// Animation
+@mixin animate ($name, $duration, $ineration, $direction) {
+	-webkit-animation-duration: $duration;
+	-moz-animation-duration: $duration;
+	-o-animation-duration: $duration;
+	animation-duration: $duration;
+	-webkit-animation-iteration-count: $ineration;
+	-moz-animation-iteration-count: $ineration;
+	-o-animation-iteration-count: $ineration;
+	animation-iteration-count: $ineration;
+	-webkit-animation-name: $name;
+	-moz-animation-name: $name;
+	-o-animation-name: $name;
+	animation-name: $name;
+	-webkit-animation-direction: $direction;
+	-moz-animation-direction: $direction;
+	-o-animation-direction: $direction;
+	animation-direction: $direction;
+}
+
+// Placeholder
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::placeholder {
+    @content;
+  }
+}
+
+// font 
+@mixin font ($weight, $size,$line-height){
+	font-weight: $weight;
+	font-size: $size;
+	line-height: $line-height;
+}
+
+// flex
+@mixin flex-sbc () {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@mixin flex-sbw () {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}

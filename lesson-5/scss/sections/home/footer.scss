@@ -1,0 +1,31 @@
+.home-footer {
+	background: $common-fc;
+	color: $border-stroke;
+
+	&__wrapper {
+		min-height: 400px;
+		max-width: 1440px;
+		margin: 0 auto;
+		padding: 106px 70px 0;
+		box-sizing: border-box;
+		@include flex-sbw;
+		column-gap: 30px;
+		row-gap: 18px;
+		line-height: 15px;
+
+		h3 {
+			@include font (700,18px,25px);
+			color: $button-font;
+			margin-bottom: 15px;
+		}
+
+		a {
+			color: $border-stroke;
+			transition: 0.4s;
+
+			&:hover:not(.home-footer-social a) {
+				text-decoration: underline;
+			}
+		}
+	}
+}

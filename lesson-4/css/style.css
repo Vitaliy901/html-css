@@ -122,6 +122,7 @@ a {
 .fieldset-wrapper__input {
 	margin: 10px auto 24px;
 }
+
 /* checkbox */
 .fieldset-wrapper__remember-forgot-wrapper{
 	display: flex;
@@ -355,7 +356,7 @@ a {
 	color: #495057;
 	font-weight: 400;
 	vertical-align: middle;
-	padding: 20px 10px 20px 0;
+	padding: 20px 0 20px 0;
 }
 .table td:nth-child(3){
 	font-weight: 500;
@@ -400,8 +401,6 @@ a {
 	}
 }
 
-
-
 /* article-list */
 @media all and (max-width: 991px) {
 	.table {
@@ -442,6 +441,6 @@ a {
 	375px - мобильные устройства;
 	565px - screen-xxs;
     767px: планшеты;
-    901px: маленькие экраны, ноутбуки;
+    991px: маленькие экраны, ноутбуки;
     1199px: большие экраны;
-    1400px и больше —  очень большие экраны, телевизоры. */
+    1440px и больше —  очень большие экраны, телевизоры. */
