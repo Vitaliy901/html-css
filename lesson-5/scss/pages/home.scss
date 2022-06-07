@@ -18,7 +18,7 @@
 			@include font(700,36px,46px);
 		}
 		a {
-			@include font(700,12px,7px);
+			@include font(700,12px,20px);
 			align-self:flex-end;
 			transition: 0.4s;
 			position: relative;
@@ -38,8 +38,8 @@
 
 	&__hm-footer{
 		min-height: 600px;
-		background: url(../img/footer_bg_image2x.jpg) center no-repeat;
-		background-size: cover;
+		@include image-2x('../img/footer_bg_image2x.jpg');
+		@include image('../img/footer_bg_image.jpg');
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -51,23 +51,37 @@
 			@include font(700,36px,46px);
 			max-width: 530px;
 			letter-spacing: 1px;
+
+			@media all and (max-width: $phones) {
+				@include font(700,28px,36px);
+			}
 		}
 
 		p {
 			max-width: 420px;
 		}
+
+		@media all and (max-width: $phones) {
+			padding: 90px 20px 0;
+			row-gap: 20px;
+		}
+	}
+	
+	@media all and (max-width: $phones) {
+		padding: 90px 20px 0;
 	}
 }
 
 .grid-wrapper {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, 310px);
+	grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
 	justify-content: center;
 	gap: 52px 20px;
 	@include font(400,12px,20px);
 	color: $article-gray;
 
 	img {
+		width: 100%;
 		margin-bottom: 13px;
 	}
 

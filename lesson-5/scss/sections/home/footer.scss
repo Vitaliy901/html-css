@@ -6,13 +6,16 @@
 		min-height: 400px;
 		max-width: 1440px;
 		margin: 0 auto;
-		padding: 106px 70px 0;
+		padding: 106px 210px 0 70px;
 		box-sizing: border-box;
 		@include flex-sbw;
 		column-gap: 30px;
 		row-gap: 18px;
 		line-height: 15px;
 
+		@media all and (max-width: $desktops) {
+			padding: 106px 70px 0;
+		}
 		h3 {
 			@include font (700,18px,25px);
 			color: $button-font;
@@ -25,6 +28,58 @@
 
 			&:hover:not(.home-footer-social a) {
 				text-decoration: underline;
+			}
+		}
+
+		p {
+			margin-top: 18px;
+		}
+
+		li {
+			margin-bottom: 18px;
+		}
+
+		.headquarter {
+			flex: 0 1 110px;
+
+			@media all and (max-width: $phones-big) {
+				margin-bottom: 18px;
+			}
+		}
+
+		.home-footer-social {
+			display: flex;
+			column-gap: 18px;
+
+			a {
+				font-size: 20px;
+			}
+
+			.icon-facebook:hover, .icon-behance:hover  {
+				color: #4a6bd7;
+			}
+			.icon-twitter:hover {
+				color: #28aef6;
+			}
+			.icon-youtube:hover, .icon-pinterest:hover {
+				color: #df2c2c;
+			}
+		}
+	}
+
+	.home-footer__cc-wrapper {
+		background: $google-bnt;
+		@include font (700,14px,18px);
+		
+		span {
+			display: block;
+			max-width: 1440px;
+			margin: 0 auto;
+			padding: 31px 70px;
+			box-sizing: border-box;
+
+			@media all and (max-width: $phones) {
+				padding: 30px 50px;
 			}
 		}
 	}

@@ -9,12 +9,20 @@
 
 		.inner-wrapper--padding {
 			padding: 27px 45px 27px 50px;
+
+			@media all and (max-width: $phones) {
+				padding: 27px 15px 27px 30px;
+			}
 		}
 
 		.header-links {
 			> a {
 				font-size: 12px;
 				color: $border-stroke;
+
+				@media all and (max-width: $phones) {
+					margin-right: 10px;
+				}
 
 				&:hover {
 					color: $button-font;
@@ -36,7 +44,7 @@
 .content-wrapper {
 	max-width: 1440px;
 	margin: 0 auto;
-	padding: 172px 0px 70px 70px;
+	padding: 252px 0px 70px 70px;
 	box-sizing: border-box;
 
 	h1 {
@@ -44,6 +52,14 @@
 		@include font(700,36px,46px);
 		max-width: 530px;
 		color: $links-btn-form;
+
+		@media all and (max-width: $phones) {
+			font-size: 28px;
+		}
+	}
+
+	@media all and (max-width: $phones) {
+		padding: 172px 0px 70px 30px;
 	}
 }
 
@@ -81,16 +97,17 @@
 	}
 
 	.first {
-		background: url(../img/header_bg_image2x.jpg) center no-repeat;
-		background-size: cover;
+		@include image-2x('../img/header_bg_image2x.jpg');
+		@include image('../img/header_bg_image.jpg');
+
 	}
 	.second {
-		background: url(../img/footer_bg_image2x.jpg) center no-repeat;
-		background-size: cover;
+		@include image-2x('../img/footer_bg_image2x.jpg');
+		@include image('../img/footer_bg_image.jpg');
 	}
 	.third {
-		background: url(../img/header_bg_image2x.jpg) center no-repeat;
-		background-size: cover;
+		@include image-2x('../img/header_bg_image2x.jpg');
+		@include image('../img/header_bg_image.jpg');
 	}
 	.one:checked + label, .two:checked + label, .three:checked + label{
 		background: $button-font;
