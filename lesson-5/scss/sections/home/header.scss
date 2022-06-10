@@ -8,7 +8,7 @@
 		backdrop-filter: blur(2px);
 
 		.inner-wrapper--padding {
-			padding: 27px 45px 27px 50px;
+			padding: 27px 50px 29px 50px;
 
 			@media all and (max-width: $phones) {
 				padding: 27px 15px 27px 30px;
@@ -16,10 +16,10 @@
 		}
 
 		.header-links {
-			> a {
-				font-size: 12px;
+			a {
+				font: 700 12px/14px $roboto;
 				color: $border-stroke;
-
+				margin-right: 26px;
 				@media all and (max-width: $phones) {
 					margin-right: 10px;
 				}
@@ -44,27 +44,28 @@
 .content-wrapper {
 	max-width: 1440px;
 	margin: 0 auto;
-	padding: 252px 0px 70px 70px;
+	padding: 254px 0px 70px 70px;
 	box-sizing: border-box;
 
 	h1 {
-		letter-spacing: 1px;
-		@include font(700,36px,46px);
+		letter-spacing: 1.1px;
+		@include font(700,35px,46px);
 		max-width: 530px;
-		color: $links-btn-form;
+		color: $button-font;
 
 		@media all and (max-width: $phones) {
 			font-size: 28px;
+			text-align: center;
 		}
 	}
 
 	@media all and (max-width: $phones) {
-		padding: 172px 0px 70px 30px;
+		padding: 172px 5px 70px 20px;
 	}
 }
 
 .slider-wrapper {
-	padding-top: 178px;
+	padding-top: 176px;
 	display: flex;
 	gap: 6px;
 

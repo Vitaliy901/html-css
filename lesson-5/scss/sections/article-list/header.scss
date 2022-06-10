@@ -23,7 +23,10 @@
 		}
 
 		.header-links {
-			> a {
+			ul {
+				@include flex-sbw;
+			}
+			a {
 				display: inline-block;
 				font: 700 14px/20px $lora;
 				letter-spacing: 0.5px;
@@ -31,7 +34,7 @@
 				color: $common-fc;
 				border-bottom: 2px solid rgba(0, 0, 0, 0);
 				padding-bottom: 4px;
-				margin-right: 27px;
+				margin-right: 29px;
 
 				&:hover {
 					border-bottom: 2px solid $links-btn-form;
