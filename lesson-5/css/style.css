@@ -811,6 +811,7 @@ body {
 .grid-wrapper img {
   width: 100%;
   margin-bottom: 13px;
+  border-radius: 11px;
 }
 .grid-wrapper h3 {
   margin: 13px 0;
