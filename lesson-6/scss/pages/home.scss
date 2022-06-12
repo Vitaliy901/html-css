@@ -1,0 +1,108 @@
+@import '../sections/home/header.scss';
+
+.hm-wrapper {
+	max-width: 1440px;
+	margin: 0 auto 101px;
+	padding: 101px 70px 0;
+	@include box-sizing(border-box); 
+
+	&__hm-header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 32px;
+
+		h2, a {
+			color: $article-table;
+		}
+		h2 {
+			padding-bottom: 5px;
+			@include font(700,36px,46px);
+		}
+		a {
+			@include font(700,12px,20px);
+			align-self:flex-end;
+			@include transition(0.4s);
+			position: relative;
+
+			&:hover {
+				color: $back;
+			}
+			&:hover::before {
+				width: 100%;
+			}
+			
+			&::before {
+				@extend %underline;
+			}
+		}
+	}
+
+	&__hm-footer{
+		min-height: 600px;
+		@include image-2x('../img/footer_bg_image2x.jpg');
+		@include image('../img/footer_bg_image.jpg');
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		row-gap: 12px;
+		color: #FFFFFF;
+		text-align: center;
+		@include box-sizing(border-box); 
+		padding-bottom: 7px;
+
+		h2 {
+			letter-spacing: 1.1px;
+			@include font(700,35px,46px);
+			max-width: 530px;
+
+			@media all and (max-width: $phones) {
+				@include font(700,28px,36px);
+			}
+		}
+
+		p {
+			max-width: 420px;
+		}
+
+		@media all and (max-width: $phones) {
+			padding: 90px 20px 0;
+			row-gap: 20px;
+		}
+	}
+	
+	@media all and (max-width: $phones) {
+		padding: 90px 20px 0;
+	}
+}
+
+.grid-wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+	justify-content: center;
+	gap: 51px 20px;
+	@include font(400,12px,20px);
+	color: $article-gray;
+
+	img {
+		width: 100%;
+		margin-bottom: 13px;
+		@include border-radius(6px);
+	}
+
+	h3 {
+		margin: 13px 0;
+	}
+
+	a {
+		@include font(700,18px,25px);
+		color: $article-table;
+		letter-spacing: 0.3px;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+@import '../sections/home/footer.scss';

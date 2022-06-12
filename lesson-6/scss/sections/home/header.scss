@@ -1,0 +1,95 @@
+.home-header {
+	position: relative;
+	min-height: 100vh;
+
+	.header-wrapper {
+		@extend .article-header;
+		z-index: 2;
+		border: none;
+		background: rgba(0, 0, 0, 0.208);
+		backdrop-filter: blur(2px);
+
+		.home-logo {
+			color: $home-logo;
+			
+			&::before {
+				background: $home-logo;
+			}
+		}
+
+		.inner-wrapper--padding {
+			padding: 27px 50px 29px 50px;
+
+			@media all and (max-width: $phones) {
+				padding: 27px 15px 27px 30px;
+			}
+		}
+
+		.header-links {
+			a {
+				font: 700 12px/14px $roboto;
+				color: $border-stroke;
+				margin-right: 27px;
+				@media all and (max-width: $phones) {
+					margin-right: 10px;
+				}
+
+				&:hover {
+					color: $button-font;
+					border-bottom: 2px solid $links-btn-form;
+				}
+			}
+		}
+	}
+}
+
+.content-wr {
+	padding-top: 254px;
+	@include box-sizing(border-box); 
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 1;
+
+	&__container {
+		max-width: 1440px;
+		padding-left: 70px;
+		margin: 0 auto;
+		h1 {
+			max-width: 530px;
+			letter-spacing: 1.1px;
+			@include font(700,35px,46px);
+			color: $button-font;
+	
+			@media all and (max-width: $phones-big) {
+				font-size: 28px;
+				text-align: center;
+			}
+		}
+		@media all and (max-width: $phones-big) {
+			padding-left: 20px;
+		}
+	}
+
+
+}
+
+.slider {
+	.img {
+		min-height: 100vh;
+	}
+	.one {
+		@include image('../img/header_bg_image.jpg');
+		@include image-2x('../img/header_bg_image2x.jpg');
+	}
+	.two { 
+		@include image('../img/sea-top1440x900.jpg');
+		@include image-2x('../img/sea-top2560x1440.jpg');
+	}
+	.three {
+		@include image('../img/sea-beach-top1440x900.jpg');
+		@include image-2x('../img/sea-beach-top2560x1440.jpg');
+	}
+
+}
+
