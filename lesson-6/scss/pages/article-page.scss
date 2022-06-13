@@ -1,189 +1,207 @@
-@import '../sections/article-list/header.scss';
+.article-page-mn{
+	position: relative;
+	z-index: 1;
+	&__article {
+		max-width: 860px;
+		margin: 0 auto;
+		padding: 0 15px;
+		@include box-sizing(content-box);
+		.article-hd {
+			text-align: center;
+			margin-bottom: 345px;
 
-.article-list {
-	margin-top: 81px;
+			@media screen and (max-width: $tablets) {
+				margin-bottom: 300px;
+			}
+			@media screen and (max-width: $phones) {
+				margin-bottom: 250px;
+			}
 
-	&__inner-wrapper {
-		margin: 0px auto;
-		max-width: 1440px;
-		padding: 0px 40px;
-
-		@media all and (max-width: $tablets-big) {
-			padding: 0 20px;
-		}
-	}
-
-	h2 {
-		color: $common-fc;
-		@include font (700, 24px,28px);
-		letter-spacing: 0.4px;
-		margin-bottom: 24px;
-
-		@media all and (max-width: $phones-big) {
-			font-size: 20px;
-			margin-bottom: 20px;
-		}
-	}
-}
-
-.home-link-wrapper {
-	padding: 19px 0 10px;
+			h1 {
+				@include font(700,35px,46px);
+				letter-spacing: 1.1px;
+				max-width: 530px;
+				margin: 0 auto;
+				padding-top: 212px;
 	
-	a {
-		color: $links-btn-form;
-		font-size: 14px;
-		line-height: 16.40px;
-		@include transition(0.4s);
-
-		&:hover {
-			color: $main-btn-hover;
-		}
-	}
-}
-
-.search-add {
-	@include flex-sbc;
-	flex-wrap: wrap;
-	gap: 10px;
-	margin-bottom: 26px;
-
-	form {
-		position: relative;
-		flex: 0 1 307px;
-
-		.search {
-			height: 40px;
-			border: 1px solid $border-stroke;
-			font-size: 14px;
-			line-height: 20px;
-			padding-left: 44px;
-
-			&:focus {
-				border: 1px solid $focus-border;
+				@media all and (max-width: $phones) {
+					@include font(700,28px,36px);
+				}
 			}
-
-			&:focus + .icon-search-glass{
-				color: $links-btn-form;
+			p {
+				@include font(400,12px,20px);
+				max-width: 420px;
+				color: $border-stroke;
+				padding-top: 13px;
+				margin: 0 auto;
 			}
-		}
-
-		.icon-search-glass {
-			color: $article-gray;
-			@include transition(0.4s);
-			position: absolute;
-			top: 8px;
-			left: 14px;
-			font-size: 22px;
-		}
-
-		@media all and (max-width: $phones-big) {
+			
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+				height: 600px;
 				width: 100%;
-				flex: 1 1 100%;
+				object-fit: cover;
 			}
+		}
+
+		>p {
+			padding-bottom: 25px;
+		}
+		blockquote {
+			@include font(700,36px,46px);
+			color: $links-btn-form;
+			letter-spacing: 0.6px;
+			margin-bottom: 25px;
+		}
+
+		time {
+			@include font(400,12px,25px);
+			display: inline-block;
+			margin-top: 29px;
+		}
+		hr {
+			border: none;
+			background: $hr-line;
+			height: 1px;
+			width: 100%;
+			margin: 40px 0;
+		}
+
+		.author-ft {
+			display: flex;
+			padding-top: 10px;
+			gap: 18px;
+			img {
+				width: 50px;
+				height: 50px;
+			}
+
+			.author-name {
+				display: flex;
+				flex-direction: column;
+				@media screen and (max-width: $phones) {
+					padding-left: 0;
+				}
+
+				@include font (400, 12px, 20px);
+				span:first-child {
+					font-weight: 700;
+					letter-spacing: 0.2px;
+				}
+			}
+
+			address {
+				width: 100%;
+				@include flex-sbc;
+				gap: 10px;
+				@media screen and (max-width: $phones) {
+					flex-wrap: wrap;
+					justify-content: end;
+				}
+				ul {
+					@extend .home-footer-social;
+					display: flex;
+					gap: 14px;
+					a {
+						color: $article-table;
+					}
+				}
+			}
+		}
 	}
 
-	.button-add {
-		display: block;
-		padding: 10px 15px;
-		background: $links-btn-form;
-		@include border-radius(5px);
-		font-size: 16px;
-		line-height: 20px;
-		color: $button-font;
-		@include transition(0.4s);
-
-		&:hover {
-			background: $main-btn-hover;
+	&__footer {
+		position: relative;
+		z-index: -2;
+		background: $bg-related;
+		margin-top: 100px;
+		.footer__wr {
+			max-width: 1300px;
+			margin: 0 auto;
+			@include box-sizing(content-box);
+			padding: 100px 10px;
+			@media screen and (max-width: $phones) {
+				padding: 100px 10px 30px;
+			}
+			h2 {
+				@include font(700, 18px,25px);
+				margin-bottom: 50px;
+				@media screen and (max-width: $desktops) {
+					text-align: center;
+				}
+			}
+	
+			.related-wr {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(310px, 420px));
+				justify-content: center;
+				gap: 20px;
+	
+				article {
+					position: relative;
+					padding: 150px 0 42px 40px;
+					color: $border-stroke;
+					@media screen and (max-width: $phones) {
+						padding: 100px 0 35px 20px;
+					}
+					img {
+						position: absolute;
+						top: 0;
+						left: 0;
+						height: 100%;
+						width: 100%;
+						object-fit: cover;
+						z-index: -1;
+						@include border-radius(5px);
+					}
+					
+					h3 {
+						max-width: 345px;
+						margin: 14px 0;
+					}
+					a {
+						@include font(700,18px,25px);
+						color: $button-font;
+						letter-spacing: 0.3px;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+					p {
+						letter-spacing: 0.2px;
+					}
+				}
+			}
 		}
-		@media all and (max-width: $phones-big) {
-			align-self: flex-end;
-		}
-	}
-	@media all and (max-width: $phones-big) {
-		flex-direction: column;
 	}
 }
-
-.table {
-	width: 100%;
-
-	tr {
-		border-bottom: 1px solid $border-stroke;
-	}
-
-	th {
-		@include font (400,12px,15px);
-		color: $article-gray;
-		text-transform: uppercase;
-		padding-bottom: 7px;
-		vertical-align: middle;
-	}
-	input {
-		height: 20px;
-		width: 20px;
-		vertical-align: middle;
-	}
-	.table-image {
-		width: 5%;
-		text-align: start;
-		@media all and (max-width: $tablets-big) {
-			width: 7%;
+.home-footer {
+	.cc-wrapper--flex{
+		@include flex-sbc();
+		@media screen and (max-width: $phones-big) {
+			flex-wrap: wrap;
+			justify-content: center;
 		}
-	}
-	.table-title {
-		width: 25%;
-		text-align: start;
-	}
-	.table-author {
-		width: 28%;
-		@media all and (max-width: $tablets-big) {
-			width: 24%;
+		span {
+			max-width: none;
+			margin: 0px;
 		}
-	}
-	.table-last-modified {
-		width: 8.2%;
-	}
-	.table-status {
-		width: 20.8%;
-	}
-	.table-action {
-		width: 8.5%;
-	}
-	td {
-		font-size: 16px;
-		line-height: 24px;
-		color: $article-table;
-		vertical-align: middle;
-		padding: 20px 0;
-	}
-	td:nth-child(3){
-		font-weight: 500;
-	}
-	td:not(.table td:nth-child(2), .table td:nth-child(3)) {
-	text-align: center;
-	}
-
-	.icon-pencil, .icon-trash {
-		color: $back;
-		font-size: 24px;
-		vertical-align: middle;
-	}
-	.icon-pencil {
-		margin-right: 15px;
-	}
-	.icon-pencil:hover {
-		color: $icon-pencil;
-	}
-	.icon-trash:hover {
-		color: $icon-trash;
-	}
-	@media all and (max-width: $tablets-big) {
-		width: $tablets-big;
-	}
+		span:last-child {
+			@media screen and (max-width: $phones-big) {
+				order: -1;
+			}
+		}
+		a {
+			color: $border-stroke;
+			padding-right: 25px;
+			&:hover {
+				color: $home-logo;
+				text-decoration: underline;
+			}
+		}
 }
-.table-wrapper {
-	@media all and (max-width: $tablets-big) {
-		overflow-y: hidden;
-		overflow-x: scroll;
-	}
+
 }

@@ -66,27 +66,6 @@
 			}
 		}
 
-		.home-footer-social {
-			display: flex;
-			column-gap: 21px;
-
-			li {
-				padding: 2px 0 0 1px;
-			}
-			a {
-				font-size: 16px;
-			}
-
-			.icon-facebook:hover, .icon-behance:hover  {
-				color: #4a6bd7;
-			}
-			.icon-twitter:hover {
-				color: #28aef6;
-			}
-			.icon-youtube:hover, .icon-pinterest:hover {
-				color: #df2c2c;
-			}
-		}
 	}
 
 	.home-footer__cc-wrapper {
@@ -97,7 +76,7 @@
 			display: block;
 			max-width: 1440px;
 			margin: 0 auto;
-			padding: 31px 45px;
+			padding: 31px 45px 31px 70px;
 			@include box-sizing(border-box); 
 			letter-spacing: 0.1px;
 			@media all and (max-width: $phones) {

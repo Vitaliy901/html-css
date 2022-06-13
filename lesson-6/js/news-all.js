@@ -1,3 +1,4 @@
 window.addEventListener('load', function (e) {
-	this.scroll({top: '862', behavior: 'smooth'});
+	let height = this.screen.height;
+	this.scroll({top: height, behavior: 'smooth'});
 });

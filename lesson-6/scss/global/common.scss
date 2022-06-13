@@ -2,6 +2,9 @@ a {
 	text-decoration: none;
 	@include transition(0.5s);
 }
+h1 {
+	color: $button-font;
+}
 %underline {
 	content: "";
 	position: absolute;
@@ -25,6 +28,9 @@ input {
 .form {
 	font: 400 16px/20px $lora;
 	color: $common-fc;
+	@include placeholder {
+		color: #df2c2c;
+	}
 
 	label {
 		font: 400 14px/20px $lora;
@@ -46,7 +52,46 @@ input {
 body {
 	font: 400 12px/20px $lora;
 }
+.header-wrapper {
+	@extend .article-header;
+	z-index: 2;
+	border: none;
+	background: rgba(0, 0, 0, 0.208);
+	backdrop-filter: blur(2px);
 
+	.home-logo {
+		color: $home-logo;
+		
+		&::before {
+			background: $home-logo;
+		}
+	}
+
+	.inner-wrapper--padding {
+		padding: 27px 50px 29px 50px;
+
+		@media all and (max-width: $phones) {
+			padding: 27px 15px 27px 30px;
+		}
+	}
+
+	.header-links {
+		a {
+			font: 700 12px/14px $roboto;
+			color: $border-stroke;
+			margin-right: 27px;
+			@media all and (max-width: $phones) {
+				margin-right: 10px;
+			}
+
+			&:hover {
+				color: $button-font;
+				border-bottom: 2px solid $links-btn-form;
+			}
+		}
+	}
+}
+// content
 .common-wrapper {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
@@ -75,3 +120,32 @@ body {
 		}
 	}
 }
+
+.home-footer-social {
+	display: flex;
+	column-gap: 21px;
+
+	li {
+		padding: 2px 0 0 1px;
+	}
+	a {
+		font-size: 16px;
+	}
+
+	.icon-facebook:hover, .icon-behance:hover  {
+		color: #4a6bd7;
+	}
+	.icon-twitter:hover {
+		color: #28aef6;
+	}
+	.icon-youtube:hover, .icon-pinterest:hover {
+		color: #df2c2c;
+	}
+}
+
+// article page
+.article-page-mn__article {
+	font: 400 14px/25px 'Lora';
+	color: $article-table;
+}
+
