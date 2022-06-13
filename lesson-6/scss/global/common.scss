@@ -46,3 +46,32 @@ input {
 body {
 	font: 400 12px/20px $lora;
 }
+
+.common-wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+	justify-content: center;
+	gap: 51px 20px;
+	@include font(400,12px,20px);
+	color: $article-gray;
+
+	img {
+		width: 100%;
+		margin-bottom: 13px;
+		@include border-radius(6px);
+	}
+
+	h3 {
+		margin: 13px 0;
+	}
+
+	a {
+		@include font(700,18px,25px);
+		color: $article-table;
+		letter-spacing: 0.3px;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

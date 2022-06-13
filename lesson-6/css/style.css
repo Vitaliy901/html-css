@@ -364,6 +364,37 @@ body {
   font: 400 12px/20px "Lora", serif;
 }
 
+.common-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  justify-content: center;
+  gap: 51px 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #6C757D;
+}
+.common-wrapper img {
+  width: 100%;
+  margin-bottom: 13px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.common-wrapper h3 {
+  margin: 13px 0;
+}
+.common-wrapper a {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #495057;
+  letter-spacing: 0.3px;
+}
+.common-wrapper a:hover {
+  text-decoration: underline;
+}
+
 .login, .register {
   display: flex;
   justify-content: center;
@@ -954,7 +985,64 @@ body {
   }
 }
 
-.grid-wrapper {
+a {
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.logo-wrapper a::before, .hm-wrapper__hm-header a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0%;
+  background-color: #212529;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input {
+  height: 48px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 100%;
+  font-size: 24px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.form {
+  font: 400 16px/20px "Lora", serif;
+  color: #212529;
+}
+.form label {
+  font: 400 14px/20px "Lora", serif;
+}
+.form a {
+  color: #D4A373;
+}
+.form a:hover {
+  text-decoration: underline;
+}
+
+.article-list {
+  font: 400 16px "Roboto", sans-serif;
+}
+
+body {
+  font: 400 12px/20px "Lora", serif;
+}
+
+.common-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   justify-content: center;
@@ -964,24 +1052,24 @@ body {
   line-height: 20px;
   color: #6C757D;
 }
-.grid-wrapper img {
+.common-wrapper img {
   width: 100%;
   margin-bottom: 13px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
-.grid-wrapper h3 {
+.common-wrapper h3 {
   margin: 13px 0;
 }
-.grid-wrapper a {
+.common-wrapper a {
   font-weight: 700;
   font-size: 18px;
   line-height: 25px;
   color: #495057;
   letter-spacing: 0.3px;
 }
-.grid-wrapper a:hover {
+.common-wrapper a:hover {
   text-decoration: underline;
 }
 
