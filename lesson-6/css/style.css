@@ -1282,6 +1282,18 @@ body {
   }
 }
 
+.home-header--bg {
+  background: url("../img/footer_bg_image.jpg") center center/cover no-repeat;
+  min-height: 600px;
+}
+.home-header--bg h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46px;
+  padding-top: 278px;
+  text-align: center;
+}
+
 .article-page-mn {
   position: relative;
   z-index: 1;
