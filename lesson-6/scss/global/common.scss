@@ -91,10 +91,10 @@ body {
 		}
 	}
 }
-// content
+// main-content
 .common-wrapper {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+	grid-template-columns: repeat(auto-fit, 310px);
 	justify-content: center;
 	gap: 51px 20px;
 	@include font(400,12px,20px);

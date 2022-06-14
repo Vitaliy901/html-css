@@ -417,7 +417,7 @@ body {
 
 .common-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fit, 310px);
   justify-content: center;
   gap: 51px 20px;
   font-weight: 400;
@@ -1140,7 +1140,7 @@ body {
 
 .common-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fit, 310px);
   justify-content: center;
   gap: 51px 20px;
   font-weight: 400;
