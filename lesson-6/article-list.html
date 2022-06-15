@@ -42,7 +42,30 @@
 						<input class="search" type="search" placeholder="Search Articles" autocomplete="off">
 						<span class="icon-search-glass"></span>
 					</form>
-					<a class="button-add" href="#">+ Add New Article</a>
+					<a class="button-add" href="#open-modal">+ Add New Article</a>
+				</div>
+				<div class="add-form-modal" id="open-modal">
+					<form action="/add" method="POST" enctype="multipart/form-data">
+						<fieldset>
+							<a href="#" title="Close" class="close">×</a>
+							<legend>New Article</legend>
+							<label for="header">Header</label>
+							<input class="input"
+								id="header"
+								type="text"
+								name="header"
+								minlength="5" autofocus required autocomplete="off">
+							<label for="content">Content</label>
+							<textarea id="content" name="content" cols="10"  minlength="50" required></textarea>
+							<label for="author">Author</label>
+							<input class="input" id="author" name="author" type="text" minlength="3" required>
+							<div class="buttons-wr">
+								<label class="button-file" for="file">add image</label>
+								<input class="file" id="file" name="uploadedFile" type="file" accept="image/*">
+								<input class="button" type="submit" value="Publish">
+							</div>
+						</fieldset>
+					</form>
 				</div>
 				<div class="table-wrapper">
 					<table class="table">

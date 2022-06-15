@@ -18,13 +18,15 @@
 	.input {
 		padding: 0 10px;
 		border: solid 1px $border-stroke;
+		@include box-shadow(0,0,5px,4px,rgba(0, 229, 255, 0));
 		margin: 10px 0 24px;
 
 		&:valid {
-			box-shadow: inset 0 0 2px 1px rgba(114, 173, 114, 0.607);
+			background: rgba(56, 128, 154, 0.225);
 		}
 		&:focus {
 			border: 1px solid $focus-border;
+			@include box-shadow(0,0,5px,4px,$focus-shadow);
 		}
 	}
 

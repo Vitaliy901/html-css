@@ -84,7 +84,11 @@ input[type=search]::-webkit-search-results-decoration {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
-
+textarea {
+	outline: none;
+	-moz-appearance: none;
+	border: 1px solid #999; /* указание этого свойства также удалит обводку в FireFox */
+}
 table {
     border-collapse: collapse;
     border-spacing: 0;
