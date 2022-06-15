@@ -878,7 +878,6 @@ body {
 
 .home-header {
   position: relative;
-  min-height: 100vh;
 }
 
 .content-wr {
@@ -896,6 +895,11 @@ body {
   padding-left: 70px;
   margin: 0 auto;
 }
+@media all and (max-width: 593px) {
+  .content-wr__container {
+    padding-left: 0px;
+  }
+}
 .content-wr__container h1 {
   max-width: 530px;
   letter-spacing: 1.1px;
@@ -910,13 +914,13 @@ body {
   }
 }
 @media all and (max-width: 593px) {
-  .content-wr__container {
-    padding-left: 20px;
+  .content-wr {
+    padding-top: 180px;
   }
 }
 
 .slider .img {
-  min-height: 100vh;
+  height: 600px;
 }
 .slider .one {
   background: url("../img/header_bg_image.jpg") center center/cover no-repeat;

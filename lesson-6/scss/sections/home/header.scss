@@ -1,7 +1,5 @@
 .home-header {
 	position: relative;
-	min-height: 100vh;
-
 }
 
 .content-wr {
@@ -16,6 +14,9 @@
 		max-width: 1440px;
 		padding-left: 70px;
 		margin: 0 auto;
+		@media all and (max-width: $phones-big) {
+			padding-left: 0px;
+		}
 		h1 {
 			max-width: 530px;
 			letter-spacing: 1.1px;
@@ -26,17 +27,15 @@
 				text-align: center;
 			}
 		}
-		@media all and (max-width: $phones-big) {
-			padding-left: 20px;
-		}
 	}
-
-
+	@media all and (max-width: $phones-big) {
+		padding-top: 180px;
+	}
 }
 
 .slider {
 	.img {
-		min-height: 100vh;
+		height: 600px
 	}
 	.one {
 		@include image('../img/header_bg_image.jpg');
