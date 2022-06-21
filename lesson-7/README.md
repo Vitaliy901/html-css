@@ -1,2 +1,2 @@
 ## Home work
-lesson 6.
+lesson 7.
