@@ -129,20 +129,33 @@
 			h2 {
 				@include font(700, 18px,25px);
 				margin-bottom: 50px;
-				@media screen and (max-width: $desktops) {
+				@media screen and (max-width: $desktops2) {
 					text-align: center;
 				}
 			}
 	
 			.related-wr {
-				@media screen and (min-width: 768px) {
-					.slick-slide {
-						margin: 10px;
+				.slick-track {
+					display: flex;
+					justify-content: space-between;
+					@media screen and (max-width: 1199px) {
+							display: block;
 					}
 				}
+				.slick-slide:not(:last-child){
+					padding-right: 8px;
+					@media screen and (max-width: 1199px) {
+							margin: 0 5px;
+							padding-right: 0px;
+					}
+					@media screen and (max-width: 768px) {
+							margin: 0;
+					}
+				}
+
 				article {
 					position: relative;
-					padding: 150px 0 42px 40px;
+					padding: 150px 0 62px 40px;
 					color: $border-stroke;
 					@media screen and (max-width: $phones) {
 						padding: 100px 0 35px 20px;
@@ -202,6 +215,5 @@
 				text-decoration: underline;
 			}
 		}
-}
-
+	}
 }
