@@ -258,7 +258,7 @@
     }
 }
 
-@mixin animate($name, $duration, $timing,$delay, $iteration, $direction, $fill-mode) {
+@mixin animate($name, $duration, $timing,$delay: initial, $iteration, $direction: initial, $fill-mode: initial) {
     -webkit-animation-duration: $duration;
     -moz-animation-duration: $duration;
     -o-animation-duration: $duration;

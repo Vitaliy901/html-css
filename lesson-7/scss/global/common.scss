@@ -5,6 +5,14 @@ a {
 h1 {
 	color: $button-font;
 }
+.clouds {
+	background: url(../../img/Clouds-1.svg), url(../../img/Clouds-2.svg);
+	@include animate(move, 35s, linear, initial, infinite);
+}
+@include keyframes (move) {
+	0% {background-position: 0px 0px, 0px 0px;}
+	100% {background-position: 1440px -800px, 900px -450px;}
+}
 %underline {
 	content: "";
 	position: absolute;
