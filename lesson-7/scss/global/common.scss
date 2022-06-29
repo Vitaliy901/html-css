@@ -6,7 +6,7 @@ h1 {
 	color: $button-font;
 }
 .clouds {
-	background: url(../../img/Clouds-1.svg), url(../../img/Clouds-2.svg);
+	background: url(../img/Clouds-1.svg), url(../img/Clouds-2.svg);
 	@include animate(move, 35s, linear, initial, infinite);
 }
 @include keyframes (move) {
